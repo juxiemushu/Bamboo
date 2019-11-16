@@ -1,6 +1,10 @@
 server:
   port: 8120
 
+spring:
+  application:
+    name: register
+
 eureka:
   instance:
     hostname: localhost
@@ -8,3 +12,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url: {http://localhost:8120/eureka}
+    registry-fetch-interval-seconds: 30
+  server:
+    enable-self-preservation: false
+
