@@ -3,7 +3,7 @@ spring:
     name: common
 
 server:
-  port: 8100
+  port: 8140
 
 eureka:
   instance:

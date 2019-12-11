@@ -5,7 +5,7 @@ spring:
   application:
     name: oauth
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/oauth?serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/oauth2?serverTimezone=UTC
     username: root
     password: 123456
     driverClassName: com.mysql.cj.jdbc.Driver
