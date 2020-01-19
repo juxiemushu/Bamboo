@@ -1,0 +1,31 @@
+server:
+  port: 8220
+
+spring:
+  application:
+    name: product
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/product?serverTimezone=UTC
+    username: root
+    password: 123456
+    driverClassName: com.mysql.cj.jdbc.Driver
+  jackson:
+    date-format:  yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+eureka:
+  instance:
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 10   # ��Eureka�л�ȡ�ķ����б��ø���һ��
+    service-url:
+      defaultZone: http://localhost:8120/eureka
+
+

@@ -1,5 +1,5 @@
 server:
-  port: 8130
+  port: 8140
 
 spring:
   application:
@@ -19,8 +19,12 @@ mybatis:
 eureka:
   instance:
     hostname: localhost
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
   client:
     fetch-registry: true
     register-with-eureka: true
+    registry-fetch-interval-seconds: 10   # 从Eureka中获取的服务列表多久更新一次
     service-url:
       defaultZone: http://localhost:8120/eureka
+

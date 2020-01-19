@@ -49,7 +49,11 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     @Bean
     public JwtAccessTokenConverter accessTokenConverter() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-        converter.setSigningKey("test-secret");
+        /*
+           Token签名用的密钥, 发出去的令牌需要密钥签名，验令牌的时候也需要令牌来验签，如果他人获知了我们的密钥
+           就可以用我们的密钥来签发我们的JWT令牌，JWT唯一的安全性就是密钥, 别人用我们的密钥来签发我们的JWT令牌就可以随意进入我们的系统
+         */
+        converter.setSigningKey("bamboo");
         return converter;
     }
 

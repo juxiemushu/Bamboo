@@ -20,6 +20,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 全局过滤器：拦截URL请求，并判断请求中是否携带有Token，如果有，则校验Token是否正确；如果没有，则返回认证失败信息
+ */
 @Component
 public class AccessFilter implements GlobalFilter, Ordered {
 
@@ -51,6 +54,7 @@ public class AccessFilter implements GlobalFilter, Ordered {
                 return response.writeWith(Mono.just(buffer));
             } else {
                 //这里需要验证 Token 是否正确
+
 //                try {
 //                    Map<String, Object> params =  (Map<String, Object>) redisTemplate.opsForValue().get("token:" + accessToken) ;
 //                    if(params.isEmpty()){

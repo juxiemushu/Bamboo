@@ -15,4 +15,5 @@ eureka:
     registry-fetch-interval-seconds: 30
   server:
     enable-self-preservation: false
+    eviction-interval-timer-in-ms: 10000
 

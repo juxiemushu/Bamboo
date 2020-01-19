@@ -1,0 +1,20 @@
+server:
+  port: 8190
+
+spring:
+  application:
+    name: sleuth
+  zipkin:
+    base-url: http://localhost:9411/
+    service:
+      name: sleuth-server
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8120/eureka
+
