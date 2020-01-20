@@ -25,6 +25,7 @@ public class GeneratorController {
      */
     @PutMapping(value = "/generate")
     public Boolean generatorTables(@RequestBody GeneratorRequestModel generatorInfo) {
+        //Validator 参数校验
         return generatorService.generatorFile(generatorInfo);
     }
 
