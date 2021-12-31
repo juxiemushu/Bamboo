@@ -1,0 +1,2 @@
+world = cn.wsp.bamboo.test.extension.HelloWorldServiceImpl
+cat = cn.wsp.bamboo.test.extension.HelloCatServiceImpl
